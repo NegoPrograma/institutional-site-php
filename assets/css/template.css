@@ -1,0 +1,96 @@
+body {
+    margin:0;
+    background-color: #1e1e1e;
+}
+
+.header {
+    width: 100%;
+    max-width: 980px;
+    height: 470px;
+    margin: auto;
+}
+
+.head1 {
+    height: 120px;
+}
+
+.banner {
+    height: 350px;
+    background-color: #514e51;
+}
+
+.menu {
+    height: 50px;
+    width: 100%;
+    max-width: 980px;
+    margin: auto;
+    background-color: #0062b7;
+}
+
+.menu ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+.menu li {
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #FFF;
+}
+
+
+.container {
+    min-height: 400px;
+    width: 100%;
+    max-width: 980px;
+    margin: auto;
+    background-color: #FFF;
+}
+
+.footer {
+    height: 100px;
+    width: 100%;
+    max-width: 980px;
+    margin: auto;
+    background-color: #303030;
+    margin-bottom: 50px;
+}
+
+.home-about {
+     padding-top: 20px;
+     padding-right: 20px;
+}
+
+.home-about img {
+    float: left;
+    margin-right:20px;
+    margin-left: 20px;
+    width: 150px;
+    height: 150px;
+}
+
+.home-about h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.home-portfolio {
+    clear:both;
+    padding: 20px;
+}
+
+.portfolio-item {
+    width: 200px;
+    height: 150px;
+    float: left;
+    border: 3px solid #303030;
+    margin: 10px;
+}
+
+.clear {
+    clear:both;
+}
