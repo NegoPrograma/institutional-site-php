@@ -19,15 +19,8 @@ class HomeController extends Controller {
         $this->loadTemplate("home",$this->data);
     }
 
-    public function fotos(){
-        $pictures = new PictureModel();
-        $this->data = $pictures->getPictures();
-        
-        $this->loadTemplate("fotos",$this->data);
+    public function sobre(){
+        $this->loadTemplate("sobre");
     }
 
-    public function sobre(){
-        $this->loadTemplate('sobre',$this->data);
-    }
-    
 };

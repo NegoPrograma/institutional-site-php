@@ -15,16 +15,15 @@ class Core {//extends Controller{
      */
     public function run(){
 
-        //10 é o valor padrão para "index.php", ja PHP_SELF retorna a url inteira.
         $url = explode("index.php",$_SERVER["PHP_SELF"]);
         $url =  end($url);
         $params = array();
-        
-        if(!empty($url) && $url != "/"){
+     
+        if(!empty($url)){
             $url = explode("/",$url);
             array_shift($url);
 
-          $currentController = $url[0] ."Controller";
+          $currentController = ucfirst($url[0]) ."Controller";
 
           if(isset($url[1])){
               $currentAction = $url[1];
@@ -40,21 +39,10 @@ class Core {//extends Controller{
           $currentAction = "index";
         }
 
-        //print_r($params);
 
-        //require_once __DIR__.'./Controller.php';
         $c = new $currentController();
-        //$c->$currentAction();
-        /**
-         * Call_user_func_array(
-         * array($objetoInstanciado,$MétodoDesteObjetoEmString),
-         * $parametros)
-         * 
-         * serve para conseguirmos invocar um método de uma classe
-         * independente de seus parâmetros
-         */
         call_user_func_array([$c,$currentAction],$params);
-
+        
     }
     
 }

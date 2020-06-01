@@ -4,7 +4,7 @@ class Controller{
 
     public function loadView($viewName,$viewData = array()){
         extract($viewData);
-        include_once './Views/'.$viewName.'.php';
+        include_once './views/'.$viewName.'.php';
     }
 
     public function loadTemplate($viewName,$viewData = array()){
